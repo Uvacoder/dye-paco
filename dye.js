@@ -16,12 +16,8 @@ const g = () => {
       s = `${s} ${r()} ${h}%, `;
     });
 
-  s = s.slice(0, -2);
-  console.log(s);
-  document.body.style.backgroundImage = `linear-gradient(${n(0, 360)}deg, ${s})`;
+  document.body.style.backgroundImage = `linear-gradient(${n(0, 360)}deg, ${s.slice(0, -2)})`;
 };
 
 window.addEventListener('load', () => { g(); });
-window.addEventListener('keydown', (e) => {
-  if (e.keyCode === 32) g(); // Space
-});
+window.addEventListener('keydown', (e) => { if (e.keyCode === 32) g(); });
