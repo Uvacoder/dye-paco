@@ -27,7 +27,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 90vh);
-  background-image: linear-gradient(to right, #EB5771, #CB77A5);
+  background-image: linear-gradient(201deg, rgb(252, 107, 174) 0%, rgb(239, 83, 67) 100%);
   color: #fff;
   transition: opacity .5s ease-out, transform .5s ease-out;
 }

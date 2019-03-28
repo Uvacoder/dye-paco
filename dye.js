@@ -1,23 +1,11 @@
-// Return a number between [l, u]
+// Generate a random number between [l, u]
 const n = (l, u) => Math.floor(Math.random() * (u - l + 1)) + l;
 
-// Return a random RGB color
-const r = () => `rgb(${n(0, 255)}, ${n(0, 255)}, ${n(0, 255)})`;
+// Helper function to call n(0, 255)
+const c = () => n(0, 255);
 
-// Generate a new gradient
-const g = () => {
-  let s = '';
-  let h = 0;
+// Generate a new random RGB color
+const r = () => `rgb(${c()}, ${c()}, ${c()})`;
 
-  Array(n(2, 3))
-    .fill()
-    .forEach(() => {
-      h = n(h, 100);
-      s = `${s} ${r()} ${h}%, `;
-    });
-
-  document.body.style.backgroundImage = `linear-gradient(${n(0, 360)}deg, ${s.slice(0, -2)})`;
-};
-
-window.addEventListener('load', () => { g(); });
-window.addEventListener('keydown', (e) => { if (e.keyCode === 32) g(); });
+// Generate a new gradient and return it
+const g = () => `linear-gradient(${n(0, 360)}deg, ${r()} 0%, ${r()} 100%)`;
