@@ -1,11 +1,8 @@
-// Generate a random number between [l, u]
-const n = (l, u) => Math.floor(Math.random() * (u - l + 1)) + l;
-
-// Helper function to call n(0, 255)
-const c = () => n(0, 255);
+// Generate a random number between [0, u]
+let n = u => Math.floor(Math.random() * (u + 1));
 
 // Generate a new random RGB color
-const r = () => `rgb(${c()}, ${c()}, ${c()})`;
+let r = () => `rgb(${n(255)}, ${n(255)}, ${n(255)})`;
 
-// Generate a new gradient and return it
-const g = () => `linear-gradient(${n(0, 360)}deg, ${r()} 0%, ${r()} 100%)`;
+// Generate a new gradient
+let g = () => `linear-gradient(${n(360)}deg, ${r()} 0%, ${r()} 100%)`;
