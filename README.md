@@ -1,6 +1,6 @@
 ![Dye Header](header.png)
 
-**Dye** is a tiny gradient generator written in **156** bytes of JavaScript.
+**Dye** is a tiny gradient generator written in **140** bytes of JavaScript.
 
 - Press `space` to generate a new gradient.
 - Press `c` to copy the CSS to the clipboard.
