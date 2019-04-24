@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "uglifyjs dye.js -o dye.min.js"
+  },
+  "devDependencies": {
+    "uglify-es": "^3.3.9"
+  }
+}
